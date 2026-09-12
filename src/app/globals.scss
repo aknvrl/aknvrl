@@ -1,0 +1,291 @@
+
+@use "../../public/assets/fonts/fonts.css";
+@use "../../public/assets/fonts/inter/inter.css";
+@use "../../public/assets/icon/icomoon/style.css";
+@use "../../public/assets/css/bootstrap.min.css";
+@use "../../public/assets/css/swiper-bundle.min.css";
+@use "../../public/assets/css/animate.css";
+@use "../../public/assets/css/odometer.min.css";
+@use "../../public/assets/css/styles.css";
+@use "../../public/assets/scss/app.scss";
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+#wrapper,
+.main-content,
+.main-content .container,
+.main-content .row,
+.main-content [class*="col-"],
+.wrap-container {
+    min-width: 0;
+}
+
+.sidebar-tools .nav-top {
+    display: grid;
+    overflow: hidden;
+}
+
+.sidebar-tools .nav-top .tf-btn-icon {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    appearance: none;
+}
+
+.language-switcher {
+    cursor: pointer;
+}
+
+.language-code {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+// Apfel Grotezk does not contain every Turkish glyph. Inter is bundled
+// locally, so headings remain consistent and fully legible in Turkish.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-2 {
+    font-family: "Inter", sans-serif;
+}
+
+.section-intro.intro-minimal {
+    padding-bottom: 0;
+
+    .intro-author {
+        margin-bottom: 0;
+    }
+}
+
+.section-about.section-certificates .s-title {
+    margin-bottom: 32px;
+}
+
+.timeline-brand-frame {
+    display: flex;
+    width: 190px;
+    min-height: 76px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px 14px;
+    border-radius: 14px;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+
+.timeline-brand-logo {
+    display: block;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%;
+    max-height: 56px;
+    object-fit: contain;
+}
+
+.section-testimonial .sw-main-image {
+    width: 100%;
+    max-width: 320px;
+}
+
+.section-testimonial .head-image .wrap-image {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.section-testimonial .swiper-testimonial_wrap {
+    margin-top: 56px;
+}
+
+.portfolio-contact-form {
+    padding: 32px;
+    border: 1px solid var(--black-6);
+    border-radius: 24px;
+    background-color: rgba(127, 127, 127, 0.04);
+
+    label {
+        color: var(--black-72);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+    }
+}
+
+@media (min-width: 992px) {
+    .intro-about-stage {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .intro-about-stage > #about.section-about {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 32px;
+        padding-bottom: 72px;
+
+        .s-desc {
+            margin-bottom: 0;
+        }
+
+        .sect-tag {
+            align-self: flex-start;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-testimonial .swiper-testimonial_wrap {
+        margin-top: 32px;
+    }
+
+    .portfolio-contact-form {
+        padding: 24px 20px;
+    }
+
+    .wg-tech {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        gap: 14px;
+    }
+
+    .wg-tech .tech-infor,
+    .wg-tech .tech_info,
+    .wg-tech .tech-progress {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .wg-tech .tech-infor {
+        align-items: flex-start;
+    }
+
+    .wg-tech .tech_image {
+        flex: 0 0 52px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .wg-tech .tech_info {
+        text-wrap: wrap;
+        overflow-wrap: anywhere;
+    }
+
+    .wg-tech .tech-progress {
+        box-sizing: border-box;
+        height: 42px;
+    }
+}
+
+@media (max-width: 991px) {
+    .tf-header-wrap,
+    .main-content,
+    .main-content .container,
+    .main-content .row,
+    .main-content [class*="col-"],
+    .wrap-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .main-content .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .main-content [class*="col-"] {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .sidebar-user {
+        box-sizing: border-box;
+        width: calc(100% - 32px);
+        max-width: 430px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+    }
+
+    .sidebar-user .wrap,
+    .sidebar-user .user-image,
+    .sidebar-user .image,
+    .sidebar-user .image img {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .sidebar-user .wrap {
+        max-height: none;
+        overflow: hidden;
+    }
+
+    .sidebar-user .image img {
+        display: block;
+    }
+
+    .sidebar-tools.pst-v1 {
+        right: 16px;
+    }
+
+    .section-testimonial .heading,
+    .section-testimonial .sw-main-image,
+    .section-testimonial .swiper-testimonial_wrap,
+    .service-accordion_item,
+    .accordion-content,
+    .work-list,
+    .wg-work {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .service-image img,
+    .work-image img,
+    .head-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .sidebar-user .user-info {
+        right: 18px;
+        left: 18px;
+    }
+
+    .sidebar-user .greeting {
+        font-size: clamp(24px, 7.2vw, 32px);
+    }
+
+    .sidebar-user .introduce {
+        overflow-wrap: anywhere;
+    }
+
+    .section-service .accordion-action h4,
+    .section-testimonial .tes-text,
+    .section-contact .s-title {
+        overflow-wrap: anywhere;
+    }
+}
